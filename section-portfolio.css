@@ -1,0 +1,40 @@
+.section__portfolio-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12pt, 1.6vw, 1.6vw);
+}
+
+.section__portfolio-menu {
+  justify-content: flex-end;
+  gap: clamp(7.5pt, 1vw, 1vw);
+}
+
+.section__portfolio-menu-button {
+  background: unset;
+  border-radius: clamp(7.5pt, 1vw, 1vw);
+}
+
+.section__portfolio-menu-button-icon {
+  font-size: clamp(15pt, 2vw, 2vw);
+}
+
+.section__portfolio-gallery-wrapper {
+  overflow: hidden;
+}
+
+.section__portfolio-gallery {
+  width: 300%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  transition: 0.5s ease;
+}
+
+.section__portfolio-gallery-image {
+  width: clamp(170pt, 25vw, 25vw);
+}
+
+@media (max-width: 600px) {
+  .section__portfolio-gallery-image {
+    width: 100%;
+  }
+}

@@ -1,0 +1,138 @@
+.section__contact-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(18pt, 2.4vw, 2.4vw);
+}
+
+.section__contact-information-form-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: clamp(36pt, 4.8vw, 4.8vw) 10vw;
+}
+
+.section__contact-information-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(18pt, 2.4vw, 2.4vw);
+}
+
+.section__contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12pt, 1.6vw, 1.6vw);
+}
+
+.section__contact-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.section__contact-list-icon-background {
+  color: #f5b63f;
+}
+
+.section__contact-list-icon-glyph {
+  color: black;
+}
+
+.section__contact-list-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2pt;
+}
+
+.section__contact-list-item-value {
+  font-weight: bold;
+}
+
+.section__contact-list-description {
+  font-size: clamp(12pt, 1.6vw, 1.6vw);
+}
+
+.section__contact-form {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(9pt, 1.2vw, 1.2vw);
+}
+
+.section__contact-form-input {
+  font: inherit;
+  width: 100%;
+  padding: clamp(6pt, 0.8vw, 0.8vw) clamp(9pt, 1.2vw, 1.2vw);
+  background-color: #2a2a2a;
+  color: #cdcdcd;
+  border: 1pt solid #cdcdcd;
+  border-radius: clamp(4.5pt, 0.6vw, 0.6vw);
+}
+
+.section__contact-form-textarea {
+  font: inherit;
+  min-height: clamp(120pt, 16vw, 16vw);
+  width: 100%;
+  padding: clamp(9pt, 1.2vw, 1.2vw);
+  background-color: #2a2a2a;
+  color: #cdcdcd;
+  border: 1pt solid #cdcdcd;
+  border-radius: clamp(4.5pt, 0.6vw, 0.6vw);
+  resize: vertical;
+}
+
+.section__contact-form-input:focus,
+.section__contact-form-textarea:focus {
+  outline: solid 3pt #f5b63f;
+}
+
+.section__contact-buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(36pt, 4.8vw, 4.8vw);
+}
+
+.section__contact-social-media-menu {
+  font-size: clamp(6pt, 0.8vw, 0.8vw);
+  gap: clamp(2.5pt, 1vw, 1vw);
+}
+
+.section__contact-social-media-icon {
+  color: #2a2a2a;
+  transition: 0.3s ease;
+}
+
+.section__contact-social-media-icon:hover,
+.section__contact-social-media-icon:active {
+  color: #f5b63f;
+}
+
+.section__contact-social-media-icon-glyph {
+  color: white;
+  transition: inherit;
+}
+
+.section__contact-social-media-icon-glyph:hover,
+.section__contact-social-media-icon-glyph:active {
+  color: black;
+}
+
+@media (max-width: 800px) {
+  .section__contact-information-form-wrapper {
+    flex-direction: column;
+  }
+
+  .section__contact-form {
+    width: 100%;
+  }
+
+  .section__contact-buttons-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .section__contact-social-media-menu {
+    align-self: flex-start;
+  }
+}

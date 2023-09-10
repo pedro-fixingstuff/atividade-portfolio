@@ -1,0 +1,240 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: clamp(60pt, 8vw, 8vw);
+}
+
+body {
+  background-color: #111111;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(9pt, 1.2vw, 1.2vw);
+}
+
+.header {
+  background-color: #111111;
+  width: 100vw;
+  height: clamp(75pt, 10vw, 10vw);
+  padding-inline: 10vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: 0.5s ease;
+  overflow: hidden;
+}
+
+.header--hidden {
+  background-color: transparent;
+}
+
+.header__navigation-menu {
+  margin-left: 10vw;
+}
+
+.navigation-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(6pt, 0.8vw, 0.8vw);
+}
+
+.navigation-menu__menu {
+  transition: 0.5s ease;
+}
+
+.navigation-menu__bars {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  font-size: clamp(22.5pt, 3vw, 3vw);
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+.navigation-menu__bars:focus {
+  outline: none;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: clamp(2.5pt, 0.5vw, 0.5vw);
+}
+
+.menu--hidden {
+  transform: translate(100vw);
+}
+
+.navigation-menu__bars--rotated {
+  transform: rotate(90deg);
+}
+
+.menu__button {
+  background-color: #2a2a2a;
+  color: inherit;
+  font-size: 0;
+  border: none;
+  border-radius: clamp(12pt, 1.6vw, 1.6vw);
+  min-width: clamp(24pt, 3.2vw, 3.2vw);
+  height: clamp(24pt, 3.2vw, 3.2vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.menu__button:hover {
+  background-color: #f5b63f;
+  font-size: unset;
+  padding-inline: clamp(12pt, 1.6vw, 1.6vw);
+  gap: clamp(7.5pt, 1vw, 1vw);
+}
+
+.menu__button:active {
+  background-color: #f5b63f;
+}
+
+.menu__button:focus {
+  outline: none;
+}
+
+.menu__button-icon {
+  font-size: clamp(9pt, 1.2vw, 1.2vw);
+}
+
+.button {
+  background-color: #f5b63f;
+  color: inherit;
+  border: none;
+  border-radius: clamp(7.5pt, 1vw, 1vw);
+  width: clamp(84pt, 11.2vw, 11.2vw);
+  height: clamp(24pt, 3.2vw, 3.2vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(3.75pt, 0.5vw, 0.5vw);
+  font-size: clamp(10.5pt, 1.4vw, 1.4vw);
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.button--justification--end {
+  justify-self: right;
+}
+
+.button:hover,
+.button:active {
+  background-color: #b88f51;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(15pt, 2vw, 2vw);
+}
+
+.timeline-item {
+  line-height: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3pt, 0.4vw, 0.4vw);
+}
+
+.timeline-item__date {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(6pt, 0.8vw, 0.8vw);
+  align-items: baseline;
+  font-weight: 600;
+}
+
+.timeline-item__date-icon {
+  color: #f5b63f;
+}
+
+.timeline-item__title {
+  font-weight: bold;
+  font-size: clamp(13.5pt, 1.8vw, 1.8vw);
+  line-height: 1em;
+}
+
+.section {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10vw;
+  padding-block: clamp(36pt, 4.8vw, 4.8vw);
+}
+
+.section--justification--start {
+  justify-content: flex-start;
+}
+
+.section--justification--end {
+  justify-content: flex-end;
+}
+
+.section--padding-top--none {
+  padding-top: 0;
+}
+
+.section__wrapper {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(36pt, 4.8vw, 4.8vw);
+}
+
+.section-title {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(5pt, 0.8vw, 0.8vw);
+}
+
+.section-title__bar {
+  background-color: #f5b63f;
+  width: clamp(2.5pt, 0.4vw, 0.4vw);
+}
+
+.section-title__text {
+  color: #f5b63f;
+  font-size: clamp(20pt, 3.2vw, 3.2vw);
+  font-weight: bold;
+}
+
+.snackbar {
+  background-color: #2a2a2a;
+  padding: clamp(15pt, 2vw, 2vw);
+  border: 1pt solid #cdcdcd;
+  border-radius: clamp(4.5pt, 0.6vw, 0.6vw);
+  box-shadow: 0 4pt 8pt rgba(0, 0, 0, 0.4);
+  position: fixed;
+  bottom: clamp(30pt, 5vw, 5vw);
+  left: clamp(30pt, 5vw, 5vw);
+  transition: 0.5s ease;
+}
+
+.snackbar--theme--error {
+  background-color: darkred;
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding-inline: 20vw;
+    position: sticky;
+  }
+
+  .section__wrapper {
+    width: 60vw;
+  }
+}
